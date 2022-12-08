@@ -34,8 +34,12 @@
  
 <details>
 <summary style="cursor : pointer;">3.1  책 검색 및 독후감 검색</summary>
+<br>
 
-자세한 내용
+ 
+  + **책 검색 기능** <br>
+    * 
+  
 </details>
 
 
