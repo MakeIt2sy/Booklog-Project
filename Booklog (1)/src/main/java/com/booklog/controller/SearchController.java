@@ -31,9 +31,7 @@ public class SearchController {
 	}
 	
 	@GetMapping(path="/bookSearch.do", produces = "application/json ;charset=utf8")
-	//bookSearch페이지에서 검색 아작스로 제이슨타입 리턴 
 	@ResponseBody
-	//https://cheershennah.tistory.com/179
 	public String bookSearchAjax(@RequestParam(value = "keyword", required = false) String keyword ,HttpServletResponse rs) {
 		
 		if (keyword != null) {
