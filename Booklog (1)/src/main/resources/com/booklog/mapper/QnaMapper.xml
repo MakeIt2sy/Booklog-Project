@@ -6,14 +6,7 @@
 <mapper namespace="com.booklog.dao.QnaDAO">
 
 	<!-- select 영역 -->
-	<!--리스트 -->
-<!--  	<select id="selectQnaList" resultType="QnaVO">
-        SELECT a.qnano,a.qnacode, a.qnareplycount,a.qnatitle,b.usernickname as qnawriter,a.qnawritetime, a.qnaisdeleted
- 		FROM qna a
- 		INNER JOIN members b
- 			ON a.qnawriter = b.userno
- 		WHERE a.qnaisdeleted LIKE 'false';
-	</select>  -->
+
 	<!-- 페이징 버전 리스트 -->
 	<select id="selectQnaListPaging" resultType="QnaVO">
     
