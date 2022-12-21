@@ -9,7 +9,7 @@ public class QnaCriteria {
 		this(1,10);
 	}
 	
-	public QnaCriteria(int pageNum, int amount) { //페이지 넘어가면서 내가 다시 지정할 수 있음
+	public QnaCriteria(int pageNum, int amount) { 
 		this.pageNum = pageNum;
 		this.amount = amount;
 	}
