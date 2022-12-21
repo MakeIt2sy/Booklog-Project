@@ -39,6 +39,7 @@
  <img width="50%" src="https://user-images.githubusercontent.com/107526525/206477489-14282264-637a-4295-802c-8ba399c6739a.gif">
  
   + **책 검색 기능** <br>
+
     * 네이버 검색 api 활용
     * keyup 할 때마다 input 의 값을 Ajax로 백엔드에 보냅니다.
     * 보낸 값을 인코딩하고 requestHeader에 아이디와 시크릿키를 세팅한 후, 네이버 서버에 요청을 보내고, 받은 결과를 프론트로 전달합니다. 
@@ -130,6 +131,53 @@
     * 아이디를 제외한 비밀번호, 이메일, 닉네임을 변경할 수 있습니다. 
     * 모든 칸이 입력되어 있는지 확인한 후, form의 내용을 serialize하여 Ajax로 백엔드에 데이터를 보내 DB 테이블 row를 Update 합니다. 
 <br>
+</details>
+
+<details>
+<summary style="cursor : pointer;">코드 확인</summary>
+<br>
+
+ 
+  + **검색 기능** <br>
+
+    * Mapper : [포스트 검색](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/resources/com/booklog/mapper/PostSearchMapper.xml) , [API](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/resources/com/booklog/mapper/ApiMapper.xml)
+    * DTO : [검색된 포스트 DTO](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/SearchedPostDTO.java) 
+    * DAO : [포스트 검색 DAO](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/dao/PostSearchDAO.java)
+    * Service : [포스트 검색 서비스](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/service/PostSearchService.java) , [책 검색 서비스](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/service/BookSearchService.java)
+    * Controller : [검색 전체 컨트롤러](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/controller/SearchController.java)
+    * View : [책 검색/ 포스트 검색 뷰](https://github.com/MakeIt2sy/Booklog-Project/tree/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/search)
+
+<br> 
+    
+  + **문의사항 게시판** <br>
+    * Mapper : [QNA](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/resources/com/booklog/mapper/QnaMapper.xml), 
+    [QNA 코드](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/resources/com/booklog/mapper/QnaCodeMapper.xml), 
+    [QNA 댓글](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/resources/com/booklog/mapper/QnaReplyMapper.xml)
+    * DTO : [QNA VO](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/QnaVO.java), 
+    [QNA 코드](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/QnaCodeVo.java), 
+    [QNA 페이징 기준](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/QnaCriteria.java) , 
+    [QNA 페이지네이션](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/QnaPageMakerDTO.java) , 
+    [QNA 댓글](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/vos/web/QnaReplyVo.java)
+    * DAO : [QNA DAO](https://github.com/MakeIt2sy/Booklog-Project/tree/main/Booklog%20(1)/src/main/java/com/booklog/dao), 
+    [QNA 코드 DAO](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/dao/QnaCodeDAO.java) , 
+    [QNA 댓글 DAO](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/dao/QnaReplyDAO.java)
+    * Service : [QNA 서비스](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/service/QnaService.java), 
+    [QNA 코드 서비스](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/service/QnaCodeService.java), 
+    [QNA 댓글 서비스](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/service/QnaReplyService.java)
+    * Controller : [QNA Controller](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/java/com/booklog/controller/QnaController.java)
+    * View : [QNA 뷰](https://github.com/MakeIt2sy/Booklog-Project/tree/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/qna)
+<br>  
+    
+  + **홈 페이지 슬라이드 및 도서관 대출 순위 페이지 ** <br>
+    * View: [홈페이지 슬라이드](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/home.jsp) , 
+    [도서관 대출 순위 페이지](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/mostCheckedoutBookList.jsp)
+    <br>
+    
+  + **회원 정보 수정 ** <br>
+    * Controller : [회원정보 수정 컨트롤러](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/java/com/booklog/controller/UserController.java#L239)
+    * View: [비밀번호 확인](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/webapp/WEB-INF/views/user/beforeEdit.jsp) , 
+    [회원정보 수정](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/webapp/WEB-INF/views/user/editMemberInfo.jsp)
+    <br>
 </details>
 
 
