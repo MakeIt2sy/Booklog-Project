@@ -39,18 +39,8 @@ public class QnaController {
 	private QnaReplyService qnaReplyService;
 	private static final Logger logger = LoggerFactory.getLogger(QnaController.class);
 	
-	/*
-	 * @GetMapping("/list") public String qnaList(Model model) {
-	 * logger.info("RequestMethod[GET] : /qna/list");
-	 * 
-	 * List<QnaVO> qnaList = qnaService.selectList();
-	 * 
-	 * model.addAttribute("qnaList", qnaList); return "/qna/list";
-	 * 
-	 * }
-	 */
 	
-	//페이징 적용 리스트
+
 	@GetMapping("/list") public String qnaList(Model model,QnaCriteria cri) {
 		logger.info("RequestMethod[GET] : /qna/list");
 		
@@ -58,14 +48,14 @@ public class QnaController {
 		
 		int total = qnaService.getTotal();
 		
-		QnaPageMakerDTO pageMake = new QnaPageMakerDTO(cri,total); //현재 페이지와 페이지당 게시물 개수 ,총 개수 이용해서 페이지 만듦
+		QnaPageMakerDTO pageMake = new QnaPageMakerDTO(cri,total); 
 		
 		model.addAttribute("pageMaker", pageMake);
 		return "/qna/list";
 		
 	}
 	
-	@GetMapping("/enroll") //등록 화면
+	@GetMapping("/enroll")
 	public String qnaEnroll(HttpServletRequest request, Model model) {
 		logger.info("RequestMethod[GET] : /qna/enroll");
 		
@@ -83,12 +73,10 @@ public class QnaController {
 	}
 	
 	
-	  @PostMapping("/enrollAjax.do") //데이터 보내는
+	  @PostMapping("/enrollAjax.do") 
 	 public @ResponseBody ReturnVo qnaEnrollAjax(HttpServletRequest request, QnaVO qnavo) {
 		  logger.info("RequestAjaxMethod[POST] : /qna/QnaEnrollAjax");
 		  
-		  //폼데이터가 오면 큐앤에이 vo에 넣고 그걸 서비스 이용해서 db에 넣는다.
-		  //인서트 완료 후 결과가 1이면 returnvo yes 아니면 no 로 통신. 사용자에게 메시지 날림
 		
 			HttpSession session = request.getSession();
 			Object object = session.getAttribute("login");
@@ -143,7 +131,7 @@ public class QnaController {
 				}
 		  }
 		  
-		//비밀번호 확인
+
 		  QnaVO qnaVo = new QnaVO();
 		  qnaVo.setQnaNo(qnaNo);
 		  qnaVo.setQnaPassword(qnaPassword);
@@ -180,7 +168,7 @@ public class QnaController {
 
 	 }
 	
-	 /*수정페이지*/
+
 	@PostMapping("/modify")
 	public String qnaModify(QnaVO qna, Model model) {
 		logger.info("RequestMethod[GET] : /qna/modify");
