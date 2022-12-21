@@ -168,12 +168,14 @@
     * View : [QNA 뷰](https://github.com/MakeIt2sy/Booklog-Project/tree/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/qna)
 <br>  
     
-  + **홈 페이지 슬라이드 및 도서관 대출 순위 페이지 ** <br>
+ 
+  + **홈 페이지 슬라이드 및 도서관 대출 순위 페이지** <br>
     * View: [홈페이지 슬라이드](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/home.jsp) , 
     [도서관 대출 순위 페이지](https://github.com/MakeIt2sy/Booklog-Project/blob/main/Booklog%20(1)/src/main/webapp/WEB-INF/views/mostCheckedoutBookList.jsp)
     <br>
     
-  + **회원 정보 수정 ** <br>
+ 
+  + **회원 정보 수정** <br>
     * Controller : [회원정보 수정 컨트롤러](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/java/com/booklog/controller/UserController.java#L239)
     * View: [비밀번호 확인](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/webapp/WEB-INF/views/user/beforeEdit.jsp) , 
     [회원정보 수정](https://github.com/MakeIt2sy/Booklog-Project/blob/ae4cdc09bcc227cf6210ac8f5fc2ddf935d8d695/Booklog%20(1)/src/main/webapp/WEB-INF/views/user/editMemberInfo.jsp)
