@@ -5,9 +5,6 @@
 	
 	
 	<select id="selectByIsbn" parameterType="String" resultType="SearchedPostDTO">
-<!--       	SELECT * 
-		FROM search_post 
-		WHERE isbn=#{value} AND POSTISDELETED LIKE 'false' -->
 		
 		SELECT p.postno,p.postkey,p.userno,m.usernickname,p.isbn,p.posttitle,p.postcontent1,p.postwritedate
 		FROM post p

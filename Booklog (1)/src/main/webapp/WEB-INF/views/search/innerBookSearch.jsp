@@ -162,7 +162,6 @@ color: #333332;
 }
 
 </style>
-
     <div class="SearchAndResultBox">
         <div class="SearchBarBox">
             <form action="/bookSearch" method="get">
@@ -175,4 +174,3 @@ color: #333332;
                </ul>
                 </div>
     </div>
- 

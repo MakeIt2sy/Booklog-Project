@@ -40,13 +40,13 @@
 		</div>
 	</div>
 	<script>
-        //http://yoonbumtae.com/?p=2858 무한 스크롤 참고 사이트     
+
         let currentPage = 1;
         const DATA_PER_PAGE = 6
         const LAST_PAGE = 9;
         
         
-     // IntersectionObeserver 부분
+
         const observerOption = {
             rootMargin: "0px 0px 30px 0px",
             threshold: 0.5
@@ -55,7 +55,7 @@
 
          
         
-       //.done, .fail 방식도 고려 . 비동기라서 순서 문제가 있음
+
       function searchFunction(){
         $.ajax({
             method: 'GET', // 요청방식
@@ -73,7 +73,7 @@
                     let str = "";
 
                   if(data.total>=1){
-                           //리스트 동적 추가 
+
                            
                            for(let i = (currentPage-1)*DATA_PER_PAGE; i <= currentPage*DATA_PER_PAGE-1; i++){
                               data.items[i]
@@ -91,7 +91,7 @@
               
                 }
                 
-                // IntersectionObserver 갱신 함수
+
                 function observerLastChild(intersectionObserver){
                               
                    const listChildren = $('.suggestedBook');
@@ -99,7 +99,7 @@
                    for(i=0; i<listChildren.length; i++){
 
                       if(!listChildren[i].nextSibling && currentPage < LAST_PAGE ){
-                         intersectionObserver.observe(listChildren[i])  // el에 대하여 관측 시작
+                         intersectionObserver.observe(listChildren[i])  
                       }else if (currentPage >= LAST_PAGE ){
                          intersectionObserver.disconnect();
                       }
@@ -110,14 +110,14 @@
                    
                 }
 
-                // IntersectionObserver 인스턴스 생성
+
                 const io = new IntersectionObserver(function(entries, observer){
                     entries.forEach(function(entry){
 
-                        // entry.isIntersecting: 특정 요소가 뷰포트와 50%(threshold 0.5) 교차되었으면
+
                         if (entry.isIntersecting) {
                            
-                            // 다음 데이터 가져오기: 자연스러운 연출을 위해 setTimeout 사용
+
                             setTimeout( function() {
                                 addData(++currentPage);
                                 observer.unobserve(entry.target);
@@ -130,7 +130,7 @@
                      
                
                $('#suggestedBookList').empty();
-               addData(currentPage);   //초기데이터      
+               addData(currentPage);         
                observerLastChild(io);
 
               }
